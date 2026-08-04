@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="zh-TW" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>進能服（6692）進軍再生能源售電業：董事會決策規劃報告 v3</title>
+  <meta name="description" content="進能服（6692）進軍再生能源售電業董事會暨總經理決策報告 v3。封頂進入、雙軌商品、平台共建策略分析與財務精算。">
+  
+  <!-- Google Fonts & Chart.js -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Local Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Top Navigation Header Bar -->
+  <header class="top-nav">
+    <div class="brand-title">
+      <span class="brand-badge">6692 進能服</span>
+      <span>再生能源售電業 董事會決策簡報 v3</span>
+    </div>
+    <div class="nav-controls">
+      <div class="mode-switcher">
+        <button id="modeDeckBtn" class="mode-btn active">📊 投影片簡報</button>
+        <button id="modeDashboardBtn" class="mode-btn">📑 完整高階報告</button>
+      </div>
+      <button id="themeToggleBtn" class="btn">🌙 深色模式</button>
+      <button id="fullscreenBtn" class="btn">⛶ 全螢幕</button>
+      <button onclick="window.print()" class="btn btn-primary">🖨️ 列印/匯出 PDF</button>
+    </div>
+  </header>
+
+  <!-- Main View Wrapper -->
+  <main class="main-wrapper">
+
+    <!-- ==========================================================================
+         VIEWMODE 1: SLIDE DECK VIEW
+         ========================================================================== -->
+    <div id="slideDeckContainer" class="slide-deck-container">
+      <div id="slideViewport" class="slide-viewport">
+
+        <!-- SLIDE 1: Cover Page -->
+        <section class="slide">
+          <div class="hero-section">
+            <div>
+              <span class="slide-part-tag">PART 1 ~ PART 4 董事會專案簡報</span>
+              <h1 class="hero-title">進能服（6692）<br>進軍再生能源售電業</h1>
+              <p class="hero-subtitle">董事會決策規劃報告 第三版 (v3)</p>
+              <div style="margin-top: 20px; display: flex; gap: 12px; flex-wrap: wrap;">
+                <span class="badge badge-green">查證基準日：2026-08-04</span>
+                <span class="badge badge-blue">定位：企業客戶入口</span>
+                <span class="badge badge-gold">預算上限：3,000 萬元</span>
+              </div>
+              <p style="margin-top: 20px; color: var(--text-muted); font-size: 0.9rem;">
+                <strong>簡報對象：</strong> 董事長、總經理、董事會成員<br>
+                <strong>核心變更：</strong> 導入 POXA 產業第一手資訊、彈性分配雙軌機制、餘電聚合輔助供給與平台共建。
+              </p>
+            </div>
+            <div>
+              <div class="slide-img-wrapper">
+                <img src="assets/images/cover.jpg" alt="進能服售電業評估簡報封面" class="slide-img" style="height: 380px;">
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SLIDE 2: Part 1 - 董事會一頁決策 -->
+        <section class="slide">
+          <div class="slide-header">
+            <span class="slide-part-tag">PART 1 董事會核心決策與一頁總結</span>
+            <h2 class="slide-title">1.1 建議結論：封頂進入，雙軌商品，平台共建</h2>
+            <p class="slide-subtitle">Capped GO with Platform Strategy</p>
+          </div>
+          <div class="slide-body">
+            <div class="alert-box alert-important">
+              <div style="font-size: 1.5rem;">💡</div>
+              <div>
+                <strong>核心提案：</strong>進能服應取得再生能源售電業執照，定位為<strong>企業客戶入口</strong>；並與 POXA 共同開發綠電銷售雲平台，將匹配試算的複雜度外部化，換取在 2–3 人精簡編制下經營雙軌商品的能力。
+              </div>
+            </div>
+
+            <div class="card-grid">
+              <div class="card">
+                <div class="card-title"><span class="card-icon">1️⃣</span> L1 電能價差為通路成本</div>
+                <p style="color: var(--text-muted); font-size: 0.92rem;">
+                  L1 電能價差在試點期預期為虧損（雙軌加權中位年虧 465–632 萬元）。這是取得企業客戶終身價值的通路取得成本。
+                </p>
+              </div>
+              <div class="card">
+                <div class="card-title"><span class="card-icon">2️⃣</span> 錨定客戶為 KPI 主軸</div>
+                <p style="color: var(--text-muted); font-size: 0.92rem;">
+                  KPI 主軸為「錨定客戶家數」與「每家客戶取得成本（CAC）」，而非單純追求轉供度數規模。
+                </p>
+              </div>
+              <div class="card">
+                <div class="card-title"><span class="card-icon">3️⃣</span> 3,000 萬封頂與選項丙</div>
+                <p style="color: var(--text-muted); font-size: 0.92rem;">
+                  完整試點 ＋ 平台共建會超支 58 萬。建議採取<strong>「選項丙」</strong>（平台降至 400 萬 + 規模下修至 15–20 GWh），使緩衝回到 192 萬 (6.4%)。
+                </p>
+              </div>
+              <div class="card">
+                <div class="card-title"><span class="card-icon">4️⃣</span> POXA 平台合作為前提</div>
+                <p style="color: var(--text-muted); font-size: 0.92rem;">
+                  雙軌並行會提高營運複雜度，可行性完全繫於 POXA 平台。若合作未成，雙軌應退回單軌（一般轉供）。
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SLIDE 3: Part 1 - 6大建議決議與5大否決條件 -->
+        <section class="slide">
+          <div class="slide-header">
+            <span class="slide-part-tag">PART 1 董事會核心決策與一頁總結</span>
+            <h2 class="slide-title">1.2 六項建議決議 vs 1.3 五項否決條件</h2>
+            <p class="slide-subtitle">明確的公司治理防線與管控節點</p>
+          </div>
+          <div class="slide-body">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+              <div>
+                <h3 style="color: var(--accent-green); margin-bottom: 12px; font-size: 1.15rem;">📋 六項建議決議 (v3 提報)</h3>
+                <div class="table-container">
+                  <table class="custom-table">
+                    <thead>
+                      <tr><th>決議項目</th><th>建議內容</th><th>董事會管控點</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>1. 定位</td><td>企業客戶入口；L1 價差不列主 KPI</td><td>每季檢視交叉銷售轉換率</td></tr>
+                      <tr><td>2. 持照路徑</td><td>6692 本體申照，不採第三方或代售</td><td>客戶/資料/合約/現金流 100% 在集團內</td></tr>
+                      <tr><td>3. 預算封頂</td><td>三年累計 3,000 萬元封頂</td><td>達 2,100 萬強制回董事會報告</td></tr>
+                      <tr><td>4. 試點上限</td><td>15–20 GWh／年；單一買方 ≤ 30%</td><td>佔比 > 20% 客戶須提保證金或保函</td></tr>
+                      <tr><td>5. 代操模式</td><td>匹配委 POXA，帳務 ERP，T-REC 自理</td><td>法遵/定價/信用/合約核准不得外包</td></tr>
+                      <tr><td><strong>6. 平台共建</strong></td><td>與 POXA 開發發電端與餘電預測模組 (400萬)</td><td><strong>IP共有、獨家期、資料權未合意不得開始</strong></td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div>
+                <h3 style="color: var(--accent-red); margin-bottom: 12px; font-size: 1.15rem;">🚫 五項否決條件 (Stop Rules)</h3>
+                <div style="display: flex; flex-direction: column; gap: 12px;">
+                  <div class="alert-box alert-danger" style="margin: 0;">
+                    <strong>1. 持照主體不可控制：</strong>第三方持有牌照或白牌代售模式一律否決。
+                  </div>
+                  <div class="alert-box alert-danger" style="margin: 0;">
+                    <strong>2. 供需條款不對稱：</strong>上游簽保證量、下游無背靠背傳導條款者否決。
+                  </div>
+                  <div class="alert-box alert-danger" style="margin: 0;">
+                    <strong>3. 現金流未封頂：</strong>未設保證金上限或出現無限連帶保證者否決。
+                  </div>
+                  <div class="alert-box alert-danger" style="margin: 0;">
+                    <strong>4. 預算或注意力失控：</strong>累計逾 3,000 萬，或本業出現須全力處理之危機。
+                  </div>
+                  <div class="alert-box alert-danger" style="margin: 0;">
+                    <strong>5. 平台合作條款不利：</strong>POXA 合作無法取得 IP 共有、資料歸屬進能服及退出移轉者，即不投入共同開發，退回純訂閱單軌模式。
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SLIDE 4: Part 2 - POXA 6大第一手資訊與市場轉折 -->
+        <section class="slide">
+          <div class="slide-header">
+            <span class="slide-part-tag">PART 2 市場轉折與制度變革</span>
+            <h2 class="slide-title">2.1 POXA 會議 6 大產業第一手輸入</h2>
+            <p class="slide-subtitle">查證基準：2026-02-13 POXA 專家會議揭露</p>
+          </div>
+          <div class="slide-body">
+            <div class="table-container">
+              <table class="custom-table">
+                <thead>
+                  <tr><th>#</th><th>輸入內容【會議輸入】</th><th>對進能服的戰略意義</th><th>影響評估</th></tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>1</strong></td>
+                    <td><strong>彈性分配取消二次匹配</strong>，餘電須於 15 分鐘內即時用掉</td>
+                    <td>直接惡化純光電售電之單位經濟與餘電比率</td>
+                    <td><span class="badge badge-red">壞消息 (-0.095元/度)</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>2</strong></td>
+                    <td>純光電轉彈性分配後 R1 下滑；<strong>百貨業配適度高、24h工廠低</strong></td>
+                    <td>客戶篩選須加入「負載形狀維度」矩陣</td>
+                    <td><span class="badge badge-blue">策略調整</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>3</strong></td>
+                    <td><strong>台積電綠電採購已達瓶頸</strong>，售電業開始出現餘電釋出</td>
+                    <td>上游賣方市場鬆動；採購端議價能力顯著提升</td>
+                    <td><span class="badge badge-green">好消息 (採購價下修)</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>4</strong></td>
+                    <td><strong>300+ 光電企業轉自發自用</strong>，餘電售台電僅 3.6 元，希望轉供</td>
+                    <td>開啟進能服獨有的低成本「餘電聚合」供給池</td>
+                    <td><span class="badge badge-green">好消息 (+0.11元貢獻)</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>5</strong></td>
+                    <td>商業條款差異使匹配複雜，部分同業仍採人工匹配</td>
+                    <td>軟體匹配能力是真實差異化護城河</td>
+                    <td><span class="badge badge-gold">核心能力</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>6</strong></td>
+                    <td>台電未提供即時資料，颱風敏感度分析難執行</td>
+                    <td>產業共通限制；需多電源與客戶組合分散</td>
+                    <td><span class="badge badge-gold">風控注意</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="alert-box alert-important">
+              <div>
+                <strong>綜合戰略判讀：</strong>第 1 項是壞消息，但第 3 與第 4 項是極大好消息，兩相抵銷後使雙軌加權淨貢獻略高於 v2。整體市場正從「有電就能賣」轉為「要會匹配才能賣」的技術與通路門檻階段。
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SLIDE 5: Part 2 - 一般轉供 vs 彈性分配與雙軌商品 -->
+        <section class="slide">
+          <div class="slide-header">
+            <span class="slide-part-tag">PART 2 市場轉折與制度變革</span>
+            <h2 class="slide-title">3.1 彈性分配制度代價與雙軌商品設計 (G/F)</h2>
+            <p class="slide-subtitle">依客戶需求分流，用商品 F 對沖商品 G 的餘電風險</p>
+          </div>
+          <div class="slide-body">
+            <div class="hero-section" style="margin-bottom: 20px;">
+              <div>
+                <div class="slide-img-wrapper">
+                  <img src="assets/images/dual_track.jpg" alt="雙軌商品設計架構圖" class="slide-img" style="height: 240px;">
+                </div>
+              </div>
+              <div>
+                <div class="table-container">
+                  <table class="custom-table">
+                    <thead>
+                      <tr><th>比較項目</th><th>一般轉供 (無彈性)</th><th>彈性分配 (新制)</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>匹配機制</td><td>有二次匹配 (分段再配)</td><td><strong>無二次匹配 (15分鐘即時)</strong></td></tr>
+                      <tr><td>餘電代價</td><td>餘電率約 5%</td><td><strong>餘電率上升至 15%</strong></td></tr>
+                      <tr><td>淨損計算</td><td colspan="2">餘電回售台電 3.6 元 vs 上游 PPA 4.55 元 → <strong>每度損 0.95 元</strong></td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-grid">
+              <div class="card" style="border-top: 4px solid var(--accent-green);">
+                <div class="card-title"><span class="badge badge-green">商品 G</span> 一般轉供型 (高 R1 保障)</div>
+                <ul style="padding-left: 20px; font-size: 0.9rem; color: var(--text-muted);">
+                  <li><strong>目標客戶：</strong>5,000 kW 義務用戶、RE100 供應鏈</li>
+                  <li><strong>特點：</strong>要求高 R1 與可稽核綠電比例，溢價較高</li>
+                  <li><strong>供給來源：</strong>一般 10–30 MW 可控 PPA 為主</li>
+                </ul>
+              </div>
+
+              <div class="card" style="border-top: 4px solid var(--accent-gold);">
+                <div class="card-title"><span class="badge badge-gold">商品 F</span> 彈性分配型 (便宜去化)</div>
+                <ul style="padding-left: 20px; font-size: 0.9rem; color: var(--text-muted);">
+                  <li><strong>目標客戶：</strong>不 Care R1、只求便宜綠電抵電費者 (商辦/連鎖/日間廠)</li>
+                  <li><strong>特點：</strong>定價較低，吸收商品 G 配不掉的餘電</li>
+                  <li><strong>供給來源：</strong>優先消化 300+ 案場之餘電聚合來源</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SLIDE 6: Part 2 - 客戶篩選矩陣 (負載形狀維度) -->
+        <section class="slide">
+          <div class="slide-header">
+            <span class="slide-part-tag">PART 2 市場轉折與制度變革</span>
+            <h2 class="slide-title">4.2 客戶負載形狀與關係雙維篩選矩陣</h2>
+            <p class="slide-subtitle">精準對齊客群負載型態，解決純光電供給配適難題</p>
+          </div>
+          <div class="slide-body">
+            <div class="table-container">
+              <table class="custom-table">
+                <thead>
+                  <tr><th>優先級</th><th>目標客群</th><th>負載形狀</th><th>既有關係</th><th>適用商品</th><th>戰略與開發順序</th></tr>
+                </thead>
+                <tbody>
+                  <tr style="background: rgba(16, 185, 129, 0.1);">
+                    <td><span class="badge badge-green">P1 第一優先</span></td>
+                    <td><strong>既有 O&M/EPC 中的白天型客戶</strong> (單班廠、園區、商辦)</td>
+                    <td>高配適 (白天峰值)</td>
+                    <td>有深厚信任</td>
+                    <td>商品 G 或 F</td>
+                    <td><strong>唯一兼具信任與配適優勢，Phase 0 優先窮盡開發</strong></td>
+                  </tr>
+                  <tr>
+                    <td><span class="badge badge-blue">P2a 次優先</span></td>
+                    <td>百貨、量販、連鎖通路、學校、醫院日間負載</td>
+                    <td><strong>最高配適【會議輸入】</strong></td>
+                    <td>無 (需冷開發)</td>
+                    <td>商品 G</td>
+                    <td>配適最佳但 CAC 較高，僅在 P1+P2b 不足 15 GWh 時啟動</td>
+                  </tr>
+                  <tr>
+                    <td><span class="badge badge-gold">P2b 關鍵對沖</span></td>
+                    <td><strong>既有 24 小時工廠客戶，願接受低 R1 者</strong></td>
+                    <td>低配適</td>
+                    <td>有深厚信任</td>
+                    <td><strong>商品 F</strong></td>
+                    <td>以低價換取其吸收餘電，是餘電去化關鍵夥伴</td>
+                  </tr>
+                  <tr style="opacity: 0.6;">
+                    <td><span class="badge badge-red">P3 否決拒接</span></td>
+                    <td>24 小時工廠且堅持要求高 R1 者</td>
+                    <td>低配適</td>
+                    <td>不論</td>
+                    <td>—</td>
+                    <td><strong>不主動開發</strong>——純光電供給下承諾絕對做不到</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="alert-box alert-warning">
+              <div>
+                <strong>誠實面對的張力：</strong>進能服既有 EPC 客戶多為工廠，但 24h 工廠配適度最低。處置原則：Phase 0 盤點 300+ 客戶中白天型佔比；P2b 工廠導向商品 F 作為餘電去化緩衝。
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SLIDE 7: Part 3 - 修正後雙軌加權單位經濟模型 -->
+        <section class="slide">
+          <div class="slide-header">
+            <span class="slide-part-tag">PART 3 財務單位經濟與餘電聚合</span>
+            <h2 class="slide-title">5.1 雙軌加權單位經濟推導 (每度淨貢獻 0.11 元)</h2>
+            <p class="slide-subtitle">餘電聚合 (+0.11元) 抵銷彈性分配 (-0.03元) 損耗後之財務試算</p>
+          </div>
+          <div class="slide-body">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: center;">
+              <div>
+                <div class="chart-card card">
+                  <canvas id="unitEconomicsChart"></canvas>
+                </div>
+              </div>
+              <div>
+                <div class="table-container">
+                  <table class="custom-table">
+                    <thead>
+                      <tr><th>項目</th><th>金額 (元/度)</th><th>說明與推導邏輯</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>下游加權售價</td><td>5.20</td><td>商品 G 高、商品 F 低，加權平均</td></tr>
+                      <tr><td>上游加權採購</td><td><strong>-4.44</strong></td><td>0.8×4.55(一般PPA) + 0.2×4.00(餘電聚合)</td></tr>
+                      <tr style="font-weight: 700; background: rgba(16, 185, 129, 0.15);"><td>毛價差</td><td><strong>0.76</strong></td><td>較 v2 (0.65) 改善 0.11 元 (餘電效益)</td></tr>
+                      <tr><td>轉供費【已查證】</td><td>-0.3052</td><td>2026 全年法定轉供費率</td></tr>
+                      <tr><td>備用容量成本</td><td>-0.05</td><td>光電 3.3% 比例計算</td></tr>
+                      <tr><td>作業成本</td><td>-0.10</td><td>POXA 平台訂閱與外部對帳</td></tr>
+                      <tr><td>餘電與補量損失</td><td><strong>-0.13</strong></td><td>彈性分配代價 (0.7×0.10 + 0.3×0.20)</td></tr>
+                      <tr><td>信用與融資成本</td><td>-0.06</td><td>買方信用風險貼現與資金占用</td></tr>
+                      <tr style="font-weight: 900; background: var(--accent-blue-glow); color: var(--accent-blue);">
+                        <td>每度淨貢獻 (中位)</td><td><strong>+0.11</strong></td><td>較 v2 的 0.03 元顯著改善</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SLIDE 8: Part 3 - 扣除固定成本後之 4 大年損益情境 -->
+        <section class="slide">
+          <div class="slide-header">
+            <span class="slide-part-tag">PART 3 財務單位經濟與餘電聚合</span>
+            <h2 class="slide-title">5.3 試點期年損益 4 大情境模擬 (20 GWh 規模)</h2>
+            <p class="slide-subtitle">試點期本業預期年虧 465–598 萬，定位為企業客戶通路成本</p>
+          </div>
+          <div class="slide-body">
+            <div style="display: grid; grid-template-columns: 1fr 1.1fr; gap: 24px; align-items: center;">
+              <div>
+                <div class="chart-card card">
+                  <canvas id="profitScenarioChart"></canvas>
+                </div>
+              </div>
+              <div>
+                <div class="table-container">
+                  <table class="custom-table">
+                    <thead>
+                      <tr><th>情境名稱</th><th>年貢獻 (萬)</th><th>固定成本 (萬)</th><th>年損益 (萬)</th><th>戰略評估與處置</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><strong>A. 僅訂閱 POXA</strong></td>
+                        <td>220</td><td>685</td>
+                        <td><span class="badge badge-red">-465 萬</span></td>
+                        <td>純訂閱模式，固定成本較低</td>
+                      </tr>
+                      <tr style="background: rgba(59, 130, 246, 0.15);">
+                        <td><strong>B. 含平台共建 (建議)</strong></td>
+                        <td>220</td><td>818</td>
+                        <td><span class="badge badge-red">-598 萬</span></td>
+                        <td><strong>多虧 133 萬/年換取平台 IP 資產</strong></td>
+                      </tr>
+                      <tr>
+                        <td>C. 餘電聚合達 40%</td>
+                        <td>440</td><td>818</td>
+                        <td><span class="badge badge-gold">-378 萬</span></td>
+                        <td>Phase 2 供應鏈擴充努力方向</td>
+                      </tr>
+                      <tr>
+                        <td>D. 25 GWh 樂觀打平</td>
+                        <td>875</td><td>818</td>
+                        <td><span class="badge badge-green">+57 萬</span></td>
+                        <td>需規模、淨貢獻、餘電同時達標</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 10px;">
+                  *固定成本含：2–3 FTE 人力 495萬 + 系統訂閱 100萬 + 平台攤提 133萬 + 法務營運 90萬 = 818萬元/年。
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SLIDE 9: Part 3 - 3,000萬預算拆解與「選項丙」防超支方案 -->
+        <section class="slide">
+          <div class="slide-header">
+            <span class="slide-part-tag">PART 3 財務單位經濟與餘電聚合</span>
+            <h2 class="slide-title">5.4 三年 3,000 萬投資預算與選項丙防超支方案</h2>
+            <p class="slide-subtitle">試算發現平台共建硬約束，採取選項丙確保緩衝 192 萬 (6.4%)</p>
+          </div>
+          <div class="slide-body">
+            <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 24px; align-items: center;">
+              <div>
+                <div class="chart-card card">
+                  <canvas id="budgetDoughnutChart"></canvas>
+                </div>
+              </div>
+              <div>
+                <div class="alert-box alert-danger" style="margin-bottom: 12px;">
+                  <div>
+                    <strong>⚠️ v3 試算發現硬約束：</strong>原規劃若「完整試點 + 平台共建 500萬」同時執行，三年需求達 3,058 萬元，將<strong>超支 58 萬</strong>，緩衝歸零！
+                  </div>
+                </div>
+
+                <div class="table-container">
+                  <table class="custom-table">
+                    <thead>
+                      <tr><th>調整選項</th><th>具體作法</th><th>釋出金額</th><th>代價與影響</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>選項甲</td><td>平台共建降至 400 萬 (砍 Phase 3 保留款)</td><td>100 萬</td><td>不影響核心功能</td></tr>
+                      <tr><td>選項乙</td><td>試點規模下修至 15–18 GWh</td><td>150 萬</td><td>營運資金占用減少</td></tr>
+                      <tr style="background: rgba(16, 185, 129, 0.15); font-weight: 700;">
+                        <td><strong>選項丙 (建議)</strong></td>
+                        <td><strong>甲 ＋ 乙 併行採行</strong></td>
+                        <td><strong>250 萬</strong></td>
+                        <td><strong>緩衝回到 192 萬 (6.4%)</strong></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="stat-box" style="margin-top: 12px; padding: 12px;">
+                  <div class="stat-value" style="font-size: 1.6rem;">CAC 176–293 萬／家</div>
+                  <div class="stat-label">客戶生命週期交叉銷售毛利 ＞ 300 萬即可判定通路投資成立</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SLIDE 10: Part 3 - 餘電聚合藍海與背靠背 8 大合約防線 -->
+        <section class="slide">
+          <div class="slide-header">
+            <span class="slide-part-tag">PART 3 財務單位經濟與餘電聚合</span>
+            <h2 class="slide-title">6.2 餘電聚合 (300+既有案場) 與背靠背防線</h2>
+            <p class="slide-subtitle">將 300+ 光電業主餘電轉換為競爭優勢，並建構零風險合約條款</p>
+          </div>
+          <div class="slide-body">
+            <div class="hero-section" style="margin-bottom: 16px;">
+              <div>
+                <div class="slide-img-wrapper">
+                  <img src="assets/images/surplus.jpg" alt="餘電聚合商業模式示意圖" class="slide-img" style="height: 200px;">
+                </div>
+              </div>
+              <div>
+                <div class="card" style="background: rgba(16, 185, 129, 0.08); border-color: var(--accent-green);">
+                  <div class="card-title" style="color: var(--accent-green);">💡 為什麼進能服做餘電聚合最有利？</div>
+                  <ul style="padding-left: 20px; font-size: 0.88rem; color: var(--text-main);">
+                    <li><strong>信任前置：</strong>300+ 光電廠均為既有 EPC/O&M 客戶，無需冷開發成本。</li>
+                    <li><strong>資料優勢：</strong>掌握 O&M 監控、發電績效與故障資料，發電與餘電預測極準確。</li>
+                    <li><strong>低採購成本：</strong>業主售台電僅 3.6 元，進能服以 4.0 元收購達成雙贏。</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <h3 style="color: var(--accent-blue); margin-bottom: 8px; font-size: 1.05rem;">🛡️ 背靠背 (Back-to-Back) 合約 5 大核心設計原則</h3>
+            <div class="card-grid" style="grid-template-columns: repeat(3, 1fr); gap: 16px;">
+              <div class="card" style="padding: 16px;">
+                <strong style="color: var(--accent-green);">1. 上游無保證量：</strong>
+                <p style="font-size: 0.85rem; color: var(--text-muted);">上游餘電採購一律為「有多少收多少」，絕不承諾最低收購量。</p>
+              </div>
+              <div class="card" style="padding: 16px;">
+                <strong style="color: var(--accent-blue);">2. 下游區間量/商品 F：</strong>
+                <p style="font-size: 0.85rem; color: var(--text-muted);">對應下游客戶不享保證量請求權，優先配給不 care R1 之 F 客戶。</p>
+              </div>
+              <div class="card" style="padding: 16px;">
+                <strong style="color: var(--accent-gold);">3. 門檻與背靠背傳導：</strong>
+                <p style="font-size: 0.85rem; color: var(--text-muted);">單案餘電 < 500 kW 不收；上游電量不足時下游免責賠償。</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SLIDE 11: Part 4 - POXA 合作架構與 400萬平台共建模組 -->
+        <section class="slide">
+          <div class="slide-header">
+            <span class="slide-part-tag">PART 4 POXA 合作與執行藍圖</span>
+            <h2 class="slide-title">7.1 POXA 平台合作與 400 萬共建模組範疇</h2>
+            <p class="slide-subtitle">補齊發電端與餘電預測短板，外部化演算法與系統負擔</p>
+          </div>
+          <div class="slide-body">
+            <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 24px; align-items: center;">
+              <div>
+                <div class="slide-img-wrapper">
+                  <img src="assets/images/poxa.jpg" alt="POXA 綠電銷售雲平台合作" class="slide-img" style="height: 260px;">
+                </div>
+              </div>
+              <div>
+                <div class="table-container">
+                  <table class="custom-table">
+                    <thead>
+                      <tr><th>能力模組</th><th>POXA 現況</th><th>進能服優勢</th><th>合作決定</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>匹配與轉供試算演算法</td><td>✅ 已成熟，服務前十大</td><td>❌ 無</td><td><strong>委由 POXA 訂閱</strong></td></tr>
+                      <tr style="background: rgba(16, 185, 129, 0.15);">
+                        <td><strong>發電端與餘電預測模組</strong></td>
+                        <td>❌ <strong>明確表示沒有</strong></td>
+                        <td>✅ <strong>348座案場數據</strong></td>
+                        <td><strong>共同開發 (400萬上限)</strong></td>
+                      </tr>
+                      <tr><td>帳務、出帳與對帳</td><td>❌ <strong>明確排除</strong></td><td>❌ 無</td><td><strong>ERP ＋ 外部代操</strong></td></tr>
+                      <tr><td>T-REC 綠電憑證作業</td><td>❌ 未提及</td><td>✅ 有發電團隊</td><td><strong>進能服自理，不外包</strong></td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="alert-box alert-danger" style="margin-top: 16px;">
+              <div>
+                <strong>🔒 合作契約 6 大必要條款（未入約不得開始開發）：</strong><br>
+                1. <strong>IP 歸屬共有/授權</strong> | 2. <strong>12–24 個月競爭對手獨家期</strong> | 3. <strong>客戶與案場資料歸屬進能服</strong> | 4. <strong>30-60 日退出移轉機制</strong> | 5. <strong>競業與資料隔離稽核權</strong> | 6. <strong>外售分潤權利</strong>。
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SLIDE 12: Part 4 - 大自然能源口徑統一與關係人風控 -->
+        <section class="slide">
+          <div class="slide-header">
+            <span class="slide-part-tag">PART 4 POXA 合作與執行藍圖</span>
+            <h2 class="slide-title">9.1 大自然能源電業口徑統一與關係人風控</h2>
+            <p class="slide-subtitle">確保獨立營運與對外資訊揭露品質一致性</p>
+          </div>
+          <div class="slide-body">
+            <div class="card-grid">
+              <div class="card">
+                <div class="card-title" style="color: var(--accent-green);">📌 董事會決議事實確認</div>
+                <p style="color: var(--text-muted); font-size: 0.92rem;">
+                  董事會兩次確認：<strong>大自然能源電業與進能服（6692）無股權關係</strong>。視為一般第三方交易對手，適用一般信用審查與合約標準。
+                </p>
+              </div>
+
+              <div class="card">
+                <div class="card-title" style="color: var(--accent-red);">⚠️ 口徑不一致風險處理</div>
+                <p style="color: var(--text-muted); font-size: 0.92rem;">
+                  2026-02-13 會議記錄中曾出現「第九名是我們轉投資的大自然」之陳述。法務須於 Phase 0 出具書面確認，統一對外溝通口徑，確保法義無漏洞。
+                </p>
+              </div>
+
+              <div class="card">
+                <div class="card-title" style="color: var(--accent-gold);">🔍 集團層面關係人查核</div>
+                <p style="color: var(--text-muted); font-size: 0.92rem;">
+                  【待確認】釐清母公司進金生國際層面是否有投資關係。若有，大自然屬關係人，交易須走關係人交易程序與公允性檢視。
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SLIDE 13: Part 4 - Phase 0 ~ Phase 3 分階段藍圖與 Gates -->
+        <section class="slide">
+          <div class="slide-header">
+            <span class="slide-part-tag">PART 4 POXA 合作與執行藍圖</span>
+            <h2 class="slide-title">10.1 分階段計畫藍圖與 Gate 0 / 1 / 2 門檻</h2>
+            <p class="slide-subtitle">嚴格實施階梯式投入與階段性量化審查機制</p>
+          </div>
+          <div class="slide-body">
+            <div class="table-container">
+              <table class="custom-table">
+                <thead>
+                  <tr><th>階段名稱</th><th>期間與人力</th><th>核心任務</th><th>Gate 通過門檻與檢核點</th></tr>
+                </thead>
+                <tbody>
+                  <tr style="background: rgba(59, 130, 246, 0.1);">
+                    <td><strong>Phase 0<br>可行性驗證</strong></td>
+                    <td>0–6 個月<br>1.0 FTE (專責)</td>
+                    <td>POXA 雙軌試算、300+ 客戶負載與餘電盤點、POXA 合約談判、CPPA 詢價</td>
+                    <td>
+                      <strong>Gate 0 門檻：</strong><br>
+                      • 供給管線 ≥ 15 GWh/年<br>
+                      • 錨定客戶 LOI ≥ 1 家 (需為 P1 客戶)<br>
+                      • 詢價加權淨貢獻 ≥ 0.10 元/度<br>
+                      • <strong>POXA 4 大護城河條款完成談判</strong>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Phase 1<br>申照與建置</strong></td>
+                    <td>6–12 個月<br>2.0 FTE</td>
+                    <td>能源署申照、資本額變更 (≥500萬)、定稿 G/F 合約範本、POXA 介面對接</td>
+                    <td>
+                      <strong>Gate 1 門檻：</strong><br>
+                      牌照到位；G/F 兩套標準合約定稿；累計投入 ≤ 650 萬元。
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Phase 2<br>受控試點</strong></td>
+                    <td>12–36 個月<br>3.0 FTE</td>
+                    <td><strong>年化 15–20 GWh</strong>、雙軌運行、共建發電與餘電模組 (250萬)</td>
+                    <td>
+                      <strong>Gate 2 門檻：</strong><br>
+                      錨定客戶 ≥ 6家；每家 CAC ≤ 300萬；<strong>餘電去化率 ≥ 85%</strong>；累計 ≤ 3,000萬。
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- SLIDE 14: Part 4 - 董事會決議草案 13 項 -->
+        <section class="slide">
+          <div class="slide-header">
+            <span class="slide-part-tag">PART 4 POXA 合作與執行藍圖</span>
+            <h2 class="slide-title">12. 董事會決議草案最終版本 (13 項條文)</h2>
+            <p class="slide-subtitle">提請董事會審議並授權經營團隊執行</p>
+          </div>
+          <div class="slide-body">
+            <div style="height: 420px; overflow-y: auto; padding-right: 12px;">
+              <ol style="padding-left: 20px; font-size: 0.9rem; line-height: 1.8; color: var(--text-main);">
+                <li>原則同意以取得企業客戶入口為<strong>單一主要目的</strong>進入再生能源售電業；電能價差不列為主要成功指標。經營團隊已明確報告：試點期本業預期年虧 465–632 萬元。</li>
+                <li><strong>核定三年累計投入上限新台幣 3,000 萬元</strong>（含平台共同開發 400 萬）。採選項丙規劃投入為 2,808 萬，緩衝僅 192 萬 (6.4%)。累計達 2,100 萬時主動回報。超過上限應停止，不得追加。</li>
+                <li>持照主體由進能服本體申照，不採第三方代售。</li>
+                <li><strong>再次確認大自然能源電業與本公司無股權關係</strong>；授權法務出具書面確認並釐清集團層面是否存在投資關係，同時統一對外口徑。</li>
+                <li>授權經營團隊於 6 個月內完成 Phase 0，並<strong>指派專責負責人 1 人，明確調整其現職職掌</strong>。</li>
+                <li><strong>核准與 POXA 之合作，開發範圍限定於「發電端與餘電預測模組」，三年投入上限 400 萬元。</strong> IP 歸屬、對其他售電業之獨家期間、客戶資料所有權、退出移轉四項條款未達成合意前，不得投入開發資源。</li>
+                <li>第一階段規模上限為年化 <strong>15–20 GWh</strong>、單一買方 ≤ 30%（佔比 > 20% 者須提保證金或保函）、單一供給來源 ≤ 35%、首批合約年期 3–5 年。</li>
+                <li><strong>同意採一般轉供（商品 G）與彈性分配（商品 F）雙軌並行、依客戶分流。</strong> 若 Gate 0 之雙軌可行性未獲證明，應退回單軌並重估規模。</li>
+                <li>餘電聚合列為<strong>輔助供給</strong>；相關上游契約一律採無保證量，且對應之下游客戶不得享有補量請求權。</li>
+                <li>所有售電合約<strong>必須</strong>包含：背靠背八項對齊、change-in-law／費率 pass-through、合約可轉讓條款。缺任一項不得簽署。</li>
+                <li>未達 Gate 0 或 Gate 1 之量化條件，不得簽署任何具重大固定量或固定價風險之合約。</li>
+                <li>財務單位應於正式簽約前取得會計師對 IFRS 15 主理人／代理人及總額／淨額認列之書面評估。</li>
+                <li>內部稽核應將定價、信用、契約、轉供、T-REC、結算、付款、<strong>平台合作之資料權限</strong>與法定申報納入稽核計畫。</li>
+              </ol>
+            </div>
+          </div>
+        </section>
+
+        <!-- SLIDE 15: Part 4 - 尚待回答的關鍵問題表 -->
+        <section class="slide">
+          <div class="slide-header">
+            <span class="slide-part-tag">PART 4 POXA 合作與執行藍圖</span>
+            <h2 class="slide-title">13. Phase 0 尚待回答的 9 大關鍵問題</h2>
+            <p class="slide-subtitle">經營團隊在 Phase 0 必須執行的盡職調查 (DD) 清單</p>
+          </div>
+          <div class="slide-body">
+            <div class="table-container">
+              <table class="custom-table">
+                <thead>
+                  <tr><th>#</th><th>尚待回答問題</th><th>權責單位</th><th>最高檢核價值</th></tr>
+                </thead>
+                <tbody>
+                  <tr style="background: rgba(239, 68, 68, 0.1);">
+                    <td><strong>1</strong></td>
+                    <td><strong>既有 300+ 光電客戶與 O&M 客戶的負載形狀分布為何？</strong> (白天型 vs 24h 型 kW)</td>
+                    <td>運維管理 (4.6)</td>
+                    <td>客戶策略與商品 F 吸收量分母</td>
+                  </tr>
+                  <tr style="background: rgba(239, 68, 68, 0.1);">
+                    <td><strong>2</strong></td>
+                    <td><strong>單一 5,000 kW 級工業客戶，三年內 O&M/EMS/BESS 累計毛利實際是多少？</strong></td>
+                    <td>業務開發 (4.1)</td>
+                    <td>CAC (176-293萬) 投資判斷式分母</td>
+                  </tr>
+                  <tr><td>3</td><td>餘電聚合真實可得規模？ (餘電 ≥ 500 kW 者有幾家)</td><td>運維管理 (4.6)</td><td>校正 §5.1 加權採購價</td></tr>
+                  <tr><td>4</td><td>POXA 平台能否同時支援雙軌匹配試算？</td><td>研發對口 (3.4)</td><td>雙軌決議執行基礎</td></tr>
+                  <tr><td>5</td><td>進金生國際 (集團) 層面是否持有大自然股權？</td><td>法務 (3.8)</td><td>關係人交易合規升級</td></tr>
+                  <tr><td>6</td><td>專責負責人是誰，從哪個現職調出？</td><td>總經理室</td><td>執行到位保證</td></tr>
+                  <tr><td>7</td><td>董事會可接受連續幾年售電本業虧損？</td><td>董事會</td><td>465-598 萬/年虧損預期確認</td></tr>
+                  <tr><td>8</td><td>售電與特定電力供應業是否共用同一交易平台？</td><td>研發/運維</td><td>系統重複投資排除</td></tr>
+                  <tr><td>9</td><td>會計認列 (總額/淨額 IFRS 15) 如何影響對外營收？</td><td>財務 (3.5)</td><td>資本市場溝通品質</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- Slide Deck Control Navigation Bar -->
+      <footer class="slide-controls-bar">
+        <div class="slide-nav-buttons">
+          <button id="prevSlideBtn" class="btn">◄ 上一頁</button>
+          <button id="nextSlideBtn" class="btn btn-primary">下一頁 ►</button>
+        </div>
+        <div class="slide-progress-indicator">
+          頁次 <span id="currentSlideNum">1</span> / <span id="totalSlidesNum">15</span>
+        </div>
+      </footer>
+    </div>
+
+    <!-- ==========================================================================
+         VIEWMODE 2: EXECUTIVE DASHBOARD VIEW (Full Document Reading)
+         ========================================================================== -->
+    <div id="dashboardContainer" class="dashboard-container">
+      <div class="dashboard-grid">
+        <!-- Sidebar Navigation -->
+        <aside class="toc-sidebar">
+          <div class="toc-title">報告章節快速導覽</div>
+          <ul class="toc-list">
+            <li><a href="#sec-part1" class="toc-link">Part 1: 董事會核心決策</a></li>
+            <li><a href="#sec-part2" class="toc-link">Part 2: 市場轉折與雙軌商品</a></li>
+            <li><a href="#sec-part3" class="toc-link">Part 3: 財務單位經濟與餘電</a></li>
+            <li><a href="#sec-part4" class="toc-link">Part 4: POXA 合作與執行藍圖</a></li>
+            <li><a href="#sec-draft" class="toc-link">董事會決議草案 (13條)</a></li>
+          </ul>
+        </aside>
+
+        <!-- Document Body Content -->
+        <div class="dashboard-content">
+          <section id="sec-part1" style="margin-bottom: 40px;">
+            <span class="slide-part-tag">PART 1</span>
+            <h2 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 16px;">董事會核心決策與一頁總結</h2>
+            <div class="card" style="margin-bottom: 20px;">
+              <h3 style="color: var(--accent-green);">建議結論：封頂進入，雙軌商品，平台共建 (Capped GO with Platform)</h3>
+              <p>進能服應取得再生能源售電業執照，定位為企業客戶入口；並與 POXA 共同開發綠電銷售雲平台，把匹配與試算的複雜度外部化，換取 2–3 人編制下經營雙軌商品的能力。</p>
+            </div>
+          </section>
+
+          <section id="sec-part2" style="margin-bottom: 40px;">
+            <span class="slide-part-tag">PART 2</span>
+            <h2 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 16px;">市場轉折、制度變革與雙軌商品策略</h2>
+            <p style="color: var(--text-muted); margin-bottom: 20px;">詳細說明彈性分配（無二次匹配）對純光電之影響，以及如何透過商品 G 與商品 F 達成風險對沖。</p>
+          </section>
+
+          <section id="sec-part3" style="margin-bottom: 40px;">
+            <span class="slide-part-tag">PART 3</span>
+            <h2 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 16px;">財務單位經濟與餘電聚合模型</h2>
+            <p style="color: var(--text-muted); margin-bottom: 20px;">推導每度淨貢獻 0.11 元、試點期年虧損 465–598 萬，以及採納選項丙防範 3,000 萬預算超支之具體路徑。</p>
+          </section>
+
+          <section id="sec-part4" style="margin-bottom: 40px;">
+            <span class="slide-part-tag">PART 4</span>
+            <h2 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 16px;">POXA 合作、風控防線與執行藍圖</h2>
+            <p style="color: var(--text-muted); margin-bottom: 20px;">涵蓋平台共建模組、6 大護城河條款、大自然能源口徑統一，以及 Phase 0~3 分階段 Gate 機制。</p>
+          </section>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
